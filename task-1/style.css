@@ -1,0 +1,268 @@
+/* Global Variables */
+:root {
+    --primary-color: #000;
+    --secondary-color: #e4e4e4;
+    --accent-color: #3498db;
+    --text-color: #000;
+    --header-bg: rgba(228, 226, 226, 0.7);
+    --footer-bg: #2d3e50;
+    --footer-text: #fff;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background: var(--header-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.00);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    list-style: none;
+    margin: 0 2.5rem 0 0;
+    padding: 0;
+}
+
+/* Hero section styles */
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto 2.5rem auto;
+    padding: 2.5rem 0.5rem;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+#home h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#home p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    color: #666;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.2s;
+    position: relative;
+    
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Layout Containers */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 2.5rem;
+    padding: 1.2rem 0.8rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08), 0 1.5px 6px rgba(0,0,0,0.06);
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+aside {
+    background: #f7f7f7;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 0.5px 0;
+    margin-top: 2rem;
+}
+
+/* Form Styles */
+/* Form & Links Layout (Side-by-Side Cards) */
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: stretch; /* Cards will be equal height even with varying content */
+    justify-content: space-between;
+    background: transparent; /* Overriding default section background */
+    box-shadow: none;
+    padding: 0;
+}
+
+
+
+.contact-wrapper, .links-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 320px;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08), 0 1.5px 6px rgba(0,0,0,0.06);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+/* Groups Name and Email in a single row */
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.links-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers links vertically */
+}
+
+.links-wrapper ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-wrapper li {
+    margin-bottom: 1.5rem;
+}
+
+.links-wrapper li:last-child {
+    margin-bottom: 0;
+}
+
+.links-wrapper a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.links-wrapper a:hover {
+    text-decoration: underline;
+}
+
+input, textarea {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: fit-content;
+}
+
+.contact-form button:hover {
+    background: #217dbb;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1rem;
+        margin: 0 0.5rem 0 0;
+    }
+    main {
+        padding: 0;
+    }
+    section {
+        padding: 0.8rem 0.3rem;
+    }
+    #contact {
+        gap: 2rem;
+    }
+    .contact-wrapper, .links-wrapper {
+        flex: none;
+        width: 100%;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    #home {
+        padding: 2rem 1rem;
+    }
+    #home h1 {
+        font-size: 2.2rem;
+    }
+    #home h3 {
+        font-size: 1.2rem;
+    }
+    #home p {
+        font-size: 0.95rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+}
