@@ -1,0 +1,203 @@
+:root {
+    /* Color Palette */
+    --clr-bg: #f8fafc;
+    --clr-card-bg: #ffffff;
+    --clr-primary: #6366f1; /* Indigo 500 */
+    --clr-primary-hover: #4f46e5; /* Indigo 600 */
+    --clr-text-base: #1e293b; /* Slate 800 */
+    --clr-text-muted: #64748b; /* Slate 500 */
+    --clr-border: #e2e8f0; /* Slate 200 */
+    --clr-placeholder-bg: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+
+    /* Spacing & Sizes */
+    --container-width: 1200px;
+    --grid-gap: 2rem;
+    --card-radius: 12px;
+    --base-padding: 1.5rem;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+    /* Transitions */
+    --transition: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration: 300ms;
+}
+
+/* --- Reset & Base Styles --- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensuring box-sizing is consistent */
+}
+
+/* Correcting box-sizing after typo */
+* { box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--clr-bg);
+    color: var(--clr-text-base);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* --- Layout Utilities --- */
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.text-center { text-align: center; }
+
+/* --- Header & Footer --- */
+.header {
+    padding: 5rem 0 3rem;
+    background: linear-gradient(180deg, #ffffff 0%, var(--clr-bg) 100%);
+    text-align: center;
+}
+
+.header__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--clr-text-base);
+    letter-spacing: -0.025em;
+}
+
+.header__subtitle {
+    font-size: 1.125rem;
+    color: var(--clr-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer {
+    padding: 4rem 0;
+    margin-top: 5rem;
+    border-top: 1px solid var(--clr-border);
+    color: var(--clr-text-muted);
+}
+
+/* --- Main Content & Product Grid --- */
+.main-content {
+    padding: 2rem 0;
+}
+
+/* 
+   MOBILE-FIRST GRID 
+   Requirement: No Flexbox for layout 
+*/
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default: Single column for mobile */
+    gap: var(--grid-gap);
+    margin: 0 auto;
+}
+
+/* --- Responsive Media Queries --- */
+
+/* Tablet (Small Screens) - 2 Columns */
+@media (min-width: 640px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop Screens - 3 Columns */
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --- Product Card Styling --- */
+.product-card {
+    background-color: var(--clr-card-bg);
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    list-style: none; /* In case used in ul */
+    border: 1px solid var(--clr-border);
+    transition: transform var(--duration) var(--transition), 
+                box-shadow var(--duration) var(--transition);
+    display: flex;
+    flex-direction: column; /* Flexbox is fine inside components, just not for the GRID layout */
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.product-card__image-container {
+    background: var(--clr-placeholder-bg);
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--duration) var(--transition);
+}
+
+.product-card:hover .product-card__image {
+    transform: scale(1.1);
+}
+
+.product-card__content {
+    padding: var(--base-padding);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--clr-text-base);
+}
+
+.product-card__price {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    margin-bottom: 1.5rem;
+}
+
+.product-card__button {
+    margin-top: auto;
+    width: 100%;
+    padding: 0.875rem;
+    background-color: var(--clr-primary);
+    color: white;
+    border: none;
+    border-radius: calc(var(--card-radius) / 2);
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--duration) var(--transition);
+    font-size: 1rem;
+}
+
+.product-card__button:hover {
+    background-color: var(--clr-primary-hover);
+}
+
+.product-card__button:active {
+    transform: scale(0.98);
+}
