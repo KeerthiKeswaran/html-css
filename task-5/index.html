@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - CSS-Only Modals</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <h1 class="logo">Insight<span>Hub</span></h1>
+            <nav>
+                <a href="#top">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="blog-container">
+        <div class="blog-header">
+            <h2>Latest Insights</h2>
+            <p>Exploring the world of design, technology, and beyond.</p>
+        </div>
+
+        <div class="posts-grid">
+            <!-- Blog Post 1 -->
+            <article class="post-card">
+                <div class="post-image" style="background-color: #667eea;"></div>
+                <div class="post-content">
+                    <span class="category">Technology</span>
+                    <h3>The Future of Urban Intelligence</h3>
+                    <p>Discover how smart cities are leveraging AI to revolutionize urban living and sustainability...</p>
+                    <a href="#modal-1" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="post-card">
+                <div class="post-image" style="background-color: #ff9a9e;"></div>
+                <div class="post-content">
+                    <span class="category">Design</span>
+                    <h3>The Power of Minimalist Design</h3>
+                    <p>Why less is often more when it comes to creating impactful and intuitive user experiences...</p>
+                    <a href="#modal-2" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="post-card">
+                <div class="post-image" style="background-color: #84fab0;"></div>
+                <div class="post-content">
+                    <span class="category">Productivity</span>
+                    <h3>Mastering Your Morning Routine</h3>
+                    <p>How the first two hours of your day define your productivity and mental clarity throughout...</p>
+                    <a href="#modal-3" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Blog Post 4 -->
+            <article class="post-card">
+                <div class="post-image" style="background-color: #f6d365;"></div>
+                <div class="post-content">
+                    <span class="category">Health</span>
+                    <h3>Nutrition for Cognitive Focus</h3>
+                    <p>Exploring the deep link between your diet and mental performance at work and home...</p>
+                    <a href="#modal-4" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Blog Post 5 -->
+            <article class="post-card">
+                <div class="post-image" style="background-color: #a1c4fd;"></div>
+                <div class="post-content">
+                    <span class="category">Environment</span>
+                    <h3>Sustainable Living Made Easy</h3>
+                    <p>Small changes you can make today to reduce your carbon footprint and live more ecologically...</p>
+                    <a href="#modal-5" class="read-more">Read More →</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="info-section">
+        <div class="container">
+            <h2>About InsightHub</h2>
+            <p>InsightHub is a dedicated platform for thinkers and creators. We believe in sharing knowledge that empowers individuals to lead more informed and creative lives. Our team of writers focus on quality over quantity, ensuring every piece provides real value to our readers.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="info-section alternate-bg">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have a story to share or a question for our editors? Get in touch with us at contact@insighthub.test or visit our social media channels.</p>
+            <div class="contact-links">
+                <a href="#social-toast">Twitter</a> | <a href="#social-toast">LinkedIn</a> | <a href="#social-toast">Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Popups Section -->
+    
+    <!-- Modal 1 -->
+    <div id="modal-1" class="modal-overlay">
+        <div class="modal-window">
+            <a href="#navbar" class="modal-close-btn">&times;</a>
+            <div class="modal-header">
+                <span class="category">Technology</span>
+                <h2>The Future of Urban Intelligence</h2>
+            </div>
+            <div class="modal-body">
+                <p>Smart cities are integrating AI-driven systems into public infrastructure to optimize energy consumption, reduce traffic congestion, and improve public safety.</p>
+                <p>This transition requires a collaborative approach between urban planners and citizens to ensure technology serves the people effectively.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal-2" class="modal-overlay">
+        <div class="modal-window">
+            <a href="#navbar" class="modal-close-btn">&times;</a>
+            <div class="modal-header">
+                <span class="category">Design</span>
+                <h2>The Power of Minimalist Design</h2>
+            </div>
+            <div class="modal-body">
+                <p>Minimalist design is a philosophy centered on simplicity and clarity. By stripping away non-essential elements, designers focus on the core message.</p>
+                <p>In digital design, this translates to cleaner interfaces and reduced cognitive load for the user.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal-3" class="modal-overlay">
+        <div class="modal-window">
+            <a href="#navbar" class="modal-close-btn">&times;</a>
+            <div class="modal-header">
+                <span class="category">Productivity</span>
+                <h2>Mastering Your Morning Routine</h2>
+            </div>
+            <div class="modal-body">
+                <p>A well-structured morning routine sets the tone for your entire day. Many successful individuals prioritize deep work or meditation to jumpstart their brain.</p>
+                <p>Avoiding screens for the first 60 minutes is highly effective for maintaining control over your focus.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal-4" class="modal-overlay">
+        <div class="modal-window">
+            <a href="#navbar" class="modal-close-btn">&times;</a>
+            <div class="modal-header">
+                <span class="category">Health</span>
+                <h2>Nutrition for Cognitive Focus</h2>
+            </div>
+            <div class="modal-body">
+                <p>Your brain is an energy-demanding organ that requires the right nutrients to function at its peak. Foods rich in omega-3 and antioxidants are proven to boost focus.</p>
+                <p>Staying hydrated is equally important for maintaining cognitive performance throughout the day.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div id="modal-5" class="modal-overlay">
+        <div class="modal-window">
+            <a href="#navbar" class="modal-close-btn">&times;</a>
+            <div class="modal-header">
+                <span class="category">Environment</span>
+                <h2>Sustainable Living Made Easy</h2>
+            </div>
+            <div class="modal-body">
+                <p>Sustainability doesn't always require massive lifestyle changes. Switching to reusable bags and reducing meat consumption can have a significant impact.</p>
+                <p>The goal is to move towards a more circular economy where waste is minimized and resources are valued.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 InsightHub. Built with pure CSS.</p>
+    </footer>
+
+    <!-- CSS-Only Toast Notification -->
+    <div id="social-toast" class="toast-notification">
+        <p>Information: The social links are to be added soon!</p>
+    </div>
+
+</body>
+</html>
