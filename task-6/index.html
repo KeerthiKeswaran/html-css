@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth - Login & Signup Tabs</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="auth-container">
+        <!-- Tab Inputs (hidden) -->
+        <input type="radio" name="auth-tabs" id="tab-login" checked>
+        <input type="radio" name="auth-tabs" id="tab-signup">
+
+        <!-- Tab Labels -->
+        <div class="auth-tabs">
+            <label for="tab-login" class="tab-label">Log In</label>
+            <label for="tab-signup" class="tab-label">Sign Up</label>
+            <div class="tab-slider"></div>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="auth-content-wrapper">
+            <div class="auth-content">
+                <!-- Login Form -->
+                <section class="auth-form" id="login-form">
+                    <h2>Welcome Back</h2>
+                    <form action="#" onsubmit="return false;">
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Login</button>
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                    </form>
+                </section>
+
+                <!-- Signup Form -->
+                <section class="auth-form" id="signup-form">
+                    <h2>Create Account</h2>
+                    <form action="#" onsubmit="return false;">
+                        <div class="input-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" placeholder="Create a password" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Sign Up</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
