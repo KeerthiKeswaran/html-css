@@ -1,10 +1,15 @@
-# Task 5: Blog Page with CSS-Only Modals
+# Task 5: Modal Popup Using the :target or Checkbox Hack
 
-## Overview
-This task involved building a modern, interactive blog page featuring a CSS-only modal popup system. The primary goal was to demonstrate how state and interactivity can be achieved in a web application using pure HTML and CSS without any JavaScript.
+## Objective
+Build a modal (popup window) that opens and closes without JavaScript.
 
-## Objectives & Implementation
-- **Modal Interaction**: Attained using the `:target` pseudo-class. Links point to specific modal IDs, and the CSS toggles visibility and triggers animations when an element's ID matches the URL hash.
+## Requirements
+- **Visibility Control**: Use an anchor link with an ID and the `:target` pseudo-class—or a hidden checkbox with the `:checked` pseudo-class—to control the modal’s visibility.
+- **Centering & Overlay**: Style the modal to appear centered with an overlay backdrop.
+- **Animations**: Add CSS transitions for the modal’s appearance and disappearance.
+
+## Implementation Details
+- **Interactions**: Attained using the `:target` pseudo-class. Links point to specific modal IDs, and the CSS toggles visibility and triggers animations when an element's ID matches the URL hash.
 - **Auto-Hiding Notification**: Implemented a **3-second toast notification** triggered by social links. This was accomplished using a CSS `@keyframes` animation on the `:target` element that automatically fades and slides away the message.
 - **Premium Aesthetics**: Combined glassmorphism (backdrop blur) with a custom `cubic-bezier` transition for smooth, high-end reveal effects of the modals.
 - **Responsive Layout**: Designed with a mobile-first philosophy using **CSS Grid (auto-fit)** and explicit media queries to ensure a seamless experience across desktop, tablet, and mobile devices.
