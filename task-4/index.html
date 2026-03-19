@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Nav with Dropdown</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using Google Fonts for better typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <a href="#" class="logo">LUX<span>URY</span></a>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Services <i class="chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Mobile App</a></li>
+                            <li><a href="#">SEO</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Solutions <i class="chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">Cloud Computing</a></li>
+                            <li><a href="#">Data Analytics</a></li>
+                            <li><a href="#">Cyber Security</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Elevate Your Digital Experience</h1>
+                <p>We craft high-end websites with unparalleled attention to detail and a focus on premium aesthetics.</p>
+                <div class="hero-btns">
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('open');
+        });
+
+        // Toggle dropdowns on mobile via click
+        document.querySelectorAll('.dropdown-toggle').forEach(dropdownToggle => {
+            dropdownToggle.addEventListener('click', (e) => {
+                if(window.innerWidth <= 768) {
+                    e.preventDefault(); // Prevent normal link behavior
+                    const parent = dropdownToggle.parentElement;
+                    
+                    // Close other dropdowns
+                    document.querySelectorAll('.dropdown').forEach(d => {
+                        if(d !== parent) d.classList.remove('active');
+                    });
+
+                    // Toggle current dropdown
+                    parent.classList.toggle('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -130,11 +130,13 @@ body {
                 box-shadow var(--duration) var(--transition);
     display: flex;
     flex-direction: column; /* Flexbox is fine inside components, just not for the GRID layout */
+
 }
 
 .product-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
+    cursor: pointer;
 }
 
 .product-card__image-container {
