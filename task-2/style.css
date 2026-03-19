@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --card-width: 350px;
+    --card-height: 220px;
+    --navy-bg: #0d1b2a;
+    --gold-bg: #212529;
+    --text-white: #ffffff;
+    --label-color: rgba(255, 255, 255, 0.7);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Page container for layout structure */
+.page-container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #1a1a1b;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+/* 
+   Carousel Layout Section:
+   - Flexbox for horizontal alignment
+   - Gap for spacing between elements
+   - Overflow-x for scrolling functionality
+*/
+.card-carousel {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap if there isn't enough space */
+    gap: 30px;
+    padding: 20px 10px;
+    justify-content: center; /* Center cards in the container */
+    align-items: center;
+}
+
+/* 
+   Realistic Debit Card Design:
+   - Fixed dimensions for card feel
+   - Premium backgrounds with image fallback
+   - Rounded corners and subtle shadows
+*/
+.debit-card {
+    min-width: var(--card-width);
+    height: var(--card-height);
+    border-radius: 16px;
+    padding: 25px;
+    color: var(--text-white);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Hover Interacton */
+.debit-card:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Themes with Background Images */
+.card-navy {
+    background: linear-gradient(rgba(13, 27, 42, 0.85), rgba(13, 27, 42, 0.85)), url('assets/bg-navy.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-gold {
+    background: linear-gradient(rgba(33, 37, 41, 0.85), rgba(33, 37, 41, 0.85)), url('assets/bg-black-gold.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header/Bank Logo Details */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bank-logo {
+    height: 32px;
+    width: auto;
+}
+
+.bank-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Visual Assets: Chip Placement */
+.card-visuals {
+    margin: 15px0px;
+}
+
+.card-chip {
+    width: 48px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Card Body Content */
+.card-number {
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--label-color);
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+.value {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Styles: Vertical stacking for smaller devices */
+@media (max-width: 768px) {
+    .card-carousel {
+        flex-direction: column;
+    }
+}
