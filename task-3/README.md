@@ -6,7 +6,7 @@ A premium, responsive product showcase built using modern CSS Grid and pure sema
 Create a clean, responsive grid layout that elegantly displays multiple product items across different screen sizes.
 
 ## Requirements
-- **CSS Grid Layout**: Arrange items in **three columns** on desktop screens.
+- **CSS Grid Layout**: Arrange items in **columns** on desktop screens.
 - **Mobile-First Responsiveness**: Automatically adjust to a **single column** on mobile devices using media queries.
 - **Consistent Alignment**: Use `gap` and `padding` to ensure uniform spacing and alignment between all items.
 - **Pure HTML & CSS**: Built without external frameworks or JavaScript for maximum performance and compatibility.
