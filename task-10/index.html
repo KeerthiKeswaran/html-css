@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeHive</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <a href="#home" class="logo">CodeHive</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#dsa">Data Structures</a>
+      <a href="#algo">Algorithms</a>
+      <a href="#webdev">Web Dev</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- HOME PAGE -->
+    <section id="home" class="page">
+      <div class="carousel-container">
+        <input type="radio" name="carousel" id="slideControls1">
+        <input type="radio" name="carousel" id="slideControls2">
+        <input type="radio" name="carousel" id="slideControls3">
+        <input type="radio" name="carousel" id="slideControls4">
+        <input type="radio" name="carousel" id="slideControls5">
+
+        <div class="carousel-slides">
+          <div class="slide">
+            <div class="slide-content">
+              <h2>Master Data Structures</h2>
+              <p>Start your journey from basics to advanced levels with our curated roadmap.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h2>Top 10 Algorithms</h2>
+              <p>Explore the most frequently asked algorithm questions in top tech interviews.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h2>Full Stack Development</h2>
+              <p>Learn Node.js, React, and MongoDB with practical projects.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h2>Interview Experiences</h2>
+              <p>Read real interview stories from candidates at Google, Amazon, and Microsoft.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h2>Monthly Coding Challenge</h2>
+              <p>Participate and win exciting prizes while sharpening your skills.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-nav">
+          <label for="slideControls1"></label>
+          <label for="slideControls2"></label>
+          <label for="slideControls3"></label>
+          <label for="slideControls4"></label>
+          <label for="slideControls5"></label>
+        </div>
+      </div>
+
+      <h1 class="section-title">Latest Articles</h1>
+      <div class="content-grid">
+        <article class="card">
+          <h3>Binary Search Trees</h3>
+          <p>Learn about insertion, deletion, and searching in a Binary Search Tree (BST).</p>
+          <a href="#bst" class="btn">Read More</a>
+        </article>
+        <article class="card">
+          <h3>Dijkstra's Algorithm</h3>
+          <p>Understanding the shortest path algorithm for weighted graphs.</p>
+          <a href="#dijkstra" class="btn">Read More</a>
+        </article>
+        <article class="card">
+          <h3>Flexbox Guide</h3>
+          <p>Complete guide to CSS Flexbox with interactive examples.</p>
+          <a href="#flexbox" class="btn">Read More</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- DATA STRUCTURES PAGE -->
+    <section id="dsa" class="page">
+      <h1 class="section-title">Data Structures</h1>
+      <p>Organize your data efficiently for storage and retrieval. Master the most essential building blocks of software development.</p>
+      
+      <div class="content-grid">
+        <article class="card">
+          <h3>Arrays</h3>
+          <p>Linear data structure where elements are stored in contiguous memory locations.</p>
+          <a href="#arrays" class="btn">Read Full Article</a>
+        </article>
+        <article class="card">
+          <h3>Linked List</h3>
+          <p>Linear data structure where each element is a separate object called a node.</p>
+          <a href="#linkedlist" class="btn">Read Full Article</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ALGORITHMS PAGE -->
+    <section id="algo" class="page">
+      <h1 class="section-title">Algorithms</h1>
+      <p>Step-by-step procedures for complex problem solving. Learn to write efficient code with optimal time and space complexity.</p>
+
+      <div class="content-grid">
+        <article class="card">
+          <h3>Bubble Sort</h3>
+          <p>The simplest sorting algorithm that works by repeatedly swapping adjacent elements if they are in the wrong order.</p>
+          <a href="#bubble-sort" class="btn">Tutorial</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- WEB DEV PAGE -->
+    <section id="webdev" class="page">
+      <h1 class="section-title">Web Development</h1>
+      <p>Building the modern web with advanced CSS and JS. Stay updated with the latest trends and frameworks in the industry.</p>
+
+      <div class="content-grid">
+        <article class="card">
+          <h3>CSS Grid</h3>
+          <p>The most powerful layout system available in CSS. It is a 2-dimensional system, meaning it can handle both columns and rows.</p>
+          <a href="#css-grid" class="btn">Study Grid</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT PAGE -->
+    <section id="about" class="page">
+      <h1 class="section-title">About CodeHive</h1>
+      <div class="card" style="width: 100%; cursor: default;">
+        <p>CodeHive is a premier educational portal designed to simplify complex computing concepts for students and professionals alike. Our platform serves as a central hub for high-quality technical content, ranging from fundamental data structures to advanced web development patterns.</p>
+        
+        <h2 style="margin: 1.5rem 0 1rem; color: var(--primary-color);">How to Use CodeHive</h2>
+        <p>Getting the most out of CodeHive is simple and intuitive:</p>
+        <ul style="margin: 1rem 0 1rem 2rem; line-height: 2;">
+          <li><strong>Explore Roadmaps:</strong> Use the interactive carousel on the Home page to discover curated learning paths for DSA and Full Stack development.</li>
+          <li><strong>Navigate Categories:</strong> Use the top navigation bar to jump directly into specific domains like Data Structures, Algorithms, or Web Development.</li>
+          <li><strong>Deep Dive:</strong> Click on "Read More" or "Tutorial" on any article card to access comprehensive, long-form guides with code examples.</li>
+          <li><strong>Search & Reference:</strong> Use our structured layout to quickly find and reference algorithmic complexities and implementation details during your interview prep.</li>
+        </ul>
+        
+        <p>Our mission is to empower developers by providing a clean, distraction-free environment for mastering the technical skills that drive modern innovation.</p>
+      </div>
+    </section>
+
+    <!-- ARTICLE PAGES (Simulated as Sections) -->
+    
+    <!-- BST -->
+    <section id="bst" class="page">
+       <div class="blog-post">
+          <div class="blog-post-header">
+            <h1>The Ultimate Expert Guide to Binary Search Trees (BST)</h1>
+          </div>
+          <p>A Binary Search Tree is a specialized node-based binary tree data structure. It is one of the most fundamental data structures in computer science, used for organizing and storing data in a way that allows for efficient retrieval, insertion, and deletion.</p>
+          
+          <h2>1. Core Properties</h2>
+          <p>For a binary tree to be considered a Binary Search Tree, it must satisfy the following invariant properties for every single node in the tree:</p>
+          <ul>
+              <li><strong>Left Subtree Property:</strong> The left subtree of a node contains only nodes with keys strictly lesser than the node’s key.</li>
+              <li><strong>Right Subtree Property:</strong> The right subtree of a node contains only nodes with keys strictly greater than the node’s key.</li>
+              <li><strong>Recursive Nature:</strong> Both the left and right subtrees must also be binary search trees themselves.</li>
+              <li><strong>No Duplicates:</strong> Typically, BSTs do not allow duplicate keys, although variations exist where duplicates are stored consistently in one subtree.</li>
+          </ul>
+
+          <h2>2. Why use a BST?</h2>
+          <p>The main advantage of a BST over a linear data structure like an array or linked list is the efficiency of search operations. While a search in an unsorted array takes <code>O(n)</code> time, a balanced BST allows for <code>O(log n)</code> search time, which is significantly faster for large datasets.</p>
+
+          <h2>3. Common Operations & Algorithms</h2>
+          <h3>A. Searching</h3>
+          <p>To search for a key, we start at the root. If the key is smaller than the root, we go left; if larger, we go right. We repeat this until we find the key or reach a NULL pointer.</p>
+          <pre>
+struct Node* search(struct Node* root, int key) {
+    if (root == NULL || root->key == key)
+       return root;
+    if (root->key < key)
+       return search(root->right, key);
+    return search(root->left, key);
+}
+          </pre>
+
+          <h3>B. Insertion</h3>
+          <p>Insertion always happens at a leaf position. We follow the search logic until we hit a NULL spot and place the new node there.</p>
+
+          <h3>C. Deletion</h3>
+          <p>Deletion is the most complex operation. It handles three cases:</p>
+          <ol>
+            <li><strong>Node is a leaf:</strong> Simply remove the node.</li>
+            <li><strong>Node has one child:</strong> Copy the child to the node and delete the child.</li>
+            <li><strong>Node has two children:</strong> Find the in-order successor (smallest in the right subtree), copy its value to the node, and delete the successor.</li>
+          </ol>
+
+          <h2>4. BST Traversals</h2>
+          <p>Traversing a tree means visiting every node once in a specific order:</p>
+          <ul>
+            <li><strong>In-order (Left, Root, Right):</strong> Produces the keys in sorted ascending order!</li>
+            <li><strong>Pre-order (Root, Left, Right):</strong> Useful for creating a copy of the tree.</li>
+            <li><strong>Post-order (Left, Right, Root):</strong> Useful for deleting the tree.</li>
+          </ul>
+
+          <h2>5. Complexity Analysis</h2>
+          <div class="card" style="margin: 1rem 0; background: #fdfdfd; cursor: default;">
+            <p><strong>Time Complexity:</strong></p>
+            <ul>
+              <li>Average Case: <code>O(log n)</code> for all operations.</li>
+              <li>Worst Case: <code>O(n)</code> (when the tree is skewed into a line).</li>
+            </ul>
+            <p><strong>Space Complexity:</strong> <code>O(n)</code> to store <code>n</code> nodes.</p>
+          </div>
+          
+          <h2>6. Real-world Applications</h2>
+          <p>BSTs are used in various internal systems including:</p>
+          <ul>
+            <li>Indexing in Databases (B-Trees are a variation).</li>
+            <li>Implementing Sets and Maps in standard libraries.</li>
+            <li>Huffman Coding for data compression.</li>
+          </ul>
+
+          <a href="#dsa" class="btn">Back to Data Structures Index</a>
+       </div>
+    </section>
+
+    <!-- DIJKSTRA -->
+    <section id="dijkstra" class="page">
+       <div class="blog-post">
+          <div class="blog-post-header">
+            <h1>Mastering Dijkstra's Shortest Path Algorithm</h1>
+          </div>
+          <p>Dijkstra's algorithm is one of the most famous algorithms in computer science. It belongs to the class of "greedy algorithms" and is used to find the shortest path between nodes in a graph with non-negative edge weights.</p>
+          
+          <h2>1. Historical Context</h2>
+          <p>Conceived by the legendary computer scientist Edsger W. Dijkstra in 1956, this algorithm remains the gold standard for routing and navigation systems today. Fun fact: Dijkstra reportedly designed the algorithm in just 20 minutes while sitting at a cafe with his wife.</p>
+
+          <h2>2. The Algorithm Mechanics</h2>
+          <p>The algorithm maintains a set of "already explored" nodes and their minimum distance from the source. At each step, it picks the unvisited node with the smallest tentative distance and explores its neighbors.</p>
+          
+          <h3>The Greedy Choice</h3>
+          <p>The algorithm is greedy because it always assumes that picking the current "closest" node will contribute to the shortest path. This works because weights are assumed to be non-negative.</p>
+
+          <h2>3. Step-by-Step Execution</h2>
+          <ol>
+            <li><strong>Initialization:</strong> Set distance to source = 0, and distance to all other nodes = Infinity.</li>
+            <li><strong>Priority Set:</strong> Add all nodes to an unvisited set.</li>
+            <li><strong>Iteration:</strong> While unvisited set is not empty:
+              <ul>
+                <li>Pick the node <code>u</code> with the smallest distance.</li>
+                <li>For each neighbor <code>v</code> of <code>u</code>:
+                  <li>Calculate <code>new_dist = dist[u] + weight(u, v)</code>.</li>
+                  <li>If <code>new_dist < dist[v]</code>, update <code>dist[v] = new_dist</code>.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h2>4. Implementation in Java</h2>
+          <pre>
+public class Dijkstra {
+    static final int V = 9;
+    int minDistance(int dist[], Boolean sptSet[]) {
+        int min = Integer.MAX_VALUE, min_index = -1;
+        for (int v = 0; v < V; v++)
+            if (sptSet[v] == false && dist[v] <= min) {
+                min = dist[v];
+                min_index = v;
+            }
+        return min_index;
+    }
+}
+          </pre>
+
+          <h2>5. Performance and Limitations</h2>
+          <p><strong>Complexity:</strong> Using an adjacency matrix, the running time is <code>O(V^2)</code>. With a binary heap and adjacency list, it improves to <code>O((E+V) log V)</code>.</p>
+          <p><strong>Limitation:</strong> Dijkstra's Algorithm does NOT work with graphs that have negative edge weights. For such cases, the Bellman-Ford algorithm must be used.</p>
+
+          <h2>6. Modern Applications</h2>
+          <ul>
+            <li>Google Maps routing (Distance and Time estimation).</li>
+            <li>Network Routing Protocols (OSPF).</li>
+            <li>Social Networking (Finding degrees of separation).</li>
+          </ul>
+          
+          <a href="#algo" class="btn">Back to Algorithms Index</a>
+       </div>
+    </section>
+
+    <!-- FLEXBOX -->
+    <section id="flexbox" class="page">
+       <div class="blog-post">
+          <div class="blog-post-header">
+            <h1>The Definitive Guide to CSS Flexbox Layout</h1>
+          </div>
+          <p>The Flexible Box Layout Module, commonly known as Flexbox, was designed as a one-dimensional layout model. It provides a more efficient way to lay out, align, and distribute space among items in a container, even when their size is unknown or dynamic.</p>
+
+          <h2>1. Understanding the Axis</h2>
+          <p>Everything in Flexbox revolves around two axes:</p>
+          <ul>
+            <li><strong>Main Axis:</strong> Determined by <code>flex-direction</code> (row or column).</li>
+            <li><strong>Cross Axis:</strong> Runs perpendicular to the main axis.</li>
+          </ul>
+
+          <h2>2. Parent Container Properties</h2>
+          <p>These properties are applied to the <code>display: flex</code> element:</p>
+          <ul>
+            <li><strong>flex-wrap:</strong> Controls whether items should wrap to multiple lines.</li>
+            <li><strong>justify-content:</strong> Aligns items along the <strong>main axis</strong> (flex-start, center, space-between).</li>
+            <li><strong>align-items:</strong> Aligns items along the <strong>cross axis</strong> (stretch, center, baseline).</li>
+            <li><strong>gap:</strong> A modern way to add spacing between items without using margins.</li>
+          </ul>
+
+          <h2>3. Child Item Properties</h2>
+          <p>Flexbox isn't just about the container; items have power too:</p>
+          <ul>
+            <li><strong>flex-grow:</strong> Defines the ability of an item to grow if necessary.</li>
+            <li><strong>flex-shrink:</strong> Defines the ability of an item to shrink if necessary.</li>
+            <li><strong>order:</strong> Controls the order in which items appear in the flex container.</li>
+          </ul>
+
+          <h2>4. Interactive Example</h2>
+          <pre>
+/* The perfect centered card layout */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.item {
+  flex: 1 1 300px; /* grow, shrink, basis */
+}
+          </pre>
+
+          <h2>5. Why Flexbox?</h2>
+          <p>Before Flexbox, centering a div vertically was a nightmare involving absolute positioning or table hacks. Flexbox turned complex layouts into single-line CSS properties, revolutionizing responsive web design.</p>
+          
+          <a href="#webdev" class="btn">Back to Web Dev Index</a>
+       </div>
+    </section>
+
+    <!-- ARRAYS -->
+    <section id="arrays" class="page">
+       <div class="blog-post">
+          <div class="blog-post-header">
+            <h1>Comprehensive Deep Dive into Arrays</h1>
+          </div>
+          <p>An array is the most basic and fundamental data structure in programming. It is a collection of items stored at <strong>contiguous memory locations</strong>, allowing for extreme efficiency in memory management and access.</p>
+
+          <h2>1. The Concept of Contiguous Memory</h2>
+          <p>When you declare an array of size 10, the computer finds a block of memory large enough to hold those 10 elements side-by-side. This means that if you know the location of the 1st element, you can mathematically calculate the location of the 5th element instantly.</p>
+          
+          <h2>2. Key Characteristics</h2>
+          <ul>
+            <li><strong>Fixed Size:</strong> In many languages like C or Java, arrays have a fixed size upon creation.</li>
+            <li><strong>Indexing:</strong> Elements are accessed via an index, usually starting at 0.</li>
+            <li><strong>Homogeneity:</strong> Arrays typically store elements of the same data type.</li>
+          </ul>
+
+          <h2>3. Time Complexities</h2>
+          <div class="card" style="margin: 1.5rem 0; cursor: default;">
+            <ul style="margin:0;">
+              <li><strong>Access:</strong> <code>O(1)</code> - The fastest possible speed.</li>
+              <li><strong>Search:</strong> <code>O(n)</code> - You might have to check every element.</li>
+              <li><strong>Insertion:</strong> <code>O(n)</code> - Because you might need to shift all other elements.</li>
+              <li><strong>Deletion:</strong> <code>O(n)</code> - Similar to insertion, shifting is required to keep memory contiguous.</li>
+            </ul>
+          </div>
+
+          <h2>4. Implementation Example</h2>
+          <pre>
+// C++ Example
+int ages[5] = {18, 21, 25, 30, 35};
+cout << ages[2]; // Outputs 25
+
+// JavaScript Example (Dynamic Array)
+let colors = ["red", "blue", "green"];
+colors.push("yellow"); // Increases size dynamically
+          </pre>
+
+          <h2>5. When to use Arrays?</h2>
+          <p>Use arrays when you have a fixed number of items or when the primary operation is accessing elements frequently by their position.</p>
+          
+          <a href="#dsa" class="btn">Back to Data Structures Index</a>
+       </div>
+    </section>
+
+    <!-- LINKED LIST -->
+    <section id="linkedlist" class="page">
+       <div class="blog-post">
+          <div class="blog-post-header">
+            <h1>Mastering the Linked List Data Structure</h1>
+          </div>
+          <p>A linked list is a linear data structure where elements are NOT stored at contiguous memory locations. Instead, each element (called a node) contains a pointer/reference to the next element in the sequence.</p>
+
+          <h2>1. Anatomy of a Node</h2>
+          <p>A standard node consists of two parts:</p>
+          <ol>
+            <li><strong>Data:</strong> The actual value stored in the node.</li>
+            <li><strong>Next Pointer:</strong> A reference to the memory address of the next node.</li>
+          </ol>
+
+          <h2>2. Types of Linked Lists</h2>
+          <ul>
+            <li><strong>Singly Linked List:</strong> Navigation is one-way only (forward).</li>
+            <li><strong>Doubly Linked List:</strong> Each node has pointers to both the next and previous nodes. Allows bidirectional travel.</li>
+            <li><strong>Circular Linked List:</strong> The last node's next pointer points back to the head, forming a loop.</li>
+          </ul>
+
+          <h2>3. Comparisons: Array vs. Linked List</h2>
+          <p>Linked lists are superior for scenarios involving frequent insertions and deletions. Unlike arrays, a linked list can grow or shrink in size during execution (dynamic size).</p>
+          
+          <pre>
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+void insertAtHead(struct Node** head, int newData) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = newData;
+    newNode->next = (*head);
+    (*head) = newNode;
+}
+          </pre>
+
+          <h2>4. Applications</h2>
+          <ul>
+            <li>Implementation of Stacks and Queues.</li>
+            <li>Undo functionality in software (using Doubly Linked Lists).</li>
+            <li>Music player playlists.</li>
+          </ul>
+          
+          <a href="#dsa" class="btn">Back to Data Structures Index</a>
+       </div>
+    </section>
+
+    <!-- BUBBLE SORT -->
+    <section id="bubble-sort" class="page">
+       <div class="blog-post">
+          <div class="blog-post-header">
+            <h1>Bubble Sort: A Comprehensive Sorting Tutorial</h1>
+          </div>
+          <p>Bubble Sort is often the first sorting algorithm developers learn. It is highly intuitive and works on the simple concept of "bubbling up" the largest elements to their correct position at the end of the array.</p>
+
+          <h2>1. The Visual Logic</h2>
+          <p>Imagine a row of numbers. You look at the first two. If the left one is bigger, they swap. You move one step right and repeat. By the time you reach the end, the largest number has effectively "bubbled" to the last spot.</p>
+
+          <h2>2. Efficiency and Complexity</h2>
+          <p>While easy to understand, Bubble Sort is highly inefficient for large datasets.</p>
+          <ul>
+            <li><strong>Time Complexity (Worst/Average):</strong> <code>O(n^2)</code></li>
+            <li><strong>Time Complexity (Best):</strong> <code>O(n)</code> (if the array is already sorted and we include a swap-check flag).</li>
+            <li><strong>Space Complexity:</strong> <code>O(1)</code> (In-place sorting).</li>
+          </ul>
+
+          <h2>3. Optimized Code Implementation</h2>
+          <pre>
+void bubbleSort(int arr[], int n) {
+    bool swapped;
+    for (int i = 0; i < n-1; i++) {
+        swapped = false;
+        for (int j = 0; j < n-i-1; j++) {
+            if (arr[j] > arr[j+1]) {
+                swap(arr[j], arr[j+1]);
+                swapped = true;
+            }
+        }
+        if (swapped == false) break; // Array is sorted!
+    }
+}
+          </pre>
+
+          <h2>4. Why Study it?</h2>
+          <p>Though rarely used in production, Bubble Sort is a critical educational tool for understanding the foundations of algorithm complexity and the mechanics of nested iterations.</p>
+          
+          <a href="#algo" class="btn">Back to Algorithms Index</a>
+       </div>
+    </section>
+
+    <!-- CSS GRID -->
+    <section id="css-grid" class="page">
+       <div class="blog-post">
+          <div class="blog-post-header">
+            <h1>Expert Mastery of CSS Grid Layout</h1>
+          </div>
+          <p>CSS Grid Layout is the most powerful layout system available in CSS. Unlike Flexbox, which is primarily one-dimensional, Grid is two-dimensional. This means it can handle both columns and rows simultaneously with ease.</p>
+
+          <h2>1. Grid Container Basics</h2>
+          <p>A grid layout consists of a parent element (the container) and one or more child elements (the items).</p>
+          <ul>
+            <li><strong>grid-template-columns:</strong> Defines the width of each column.</li>
+            <li><strong>grid-template-rows:</strong> Defines the height of each row.</li>
+            <li><strong>fr unit:</strong> A special fractional unit that represents a portion of the available space.</li>
+          </ul>
+
+          <h2>2. Powerful Grid Functions</h2>
+          <ul>
+            <li><strong>repeat():</strong> Avoids redundancy (e.g., <code>repeat(3, 1fr)</code>).</li>
+            <li><strong>minmax():</strong> Sets a minimum and maximum size for tracks.</li>
+            <li><strong>grid-template-areas:</strong> Allows you to name grid cells and place items by name.</li>
+          </ul>
+
+          <h2>3. Implementation Mockup</h2>
+          <pre>
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.header { grid-area: h; }
+.main   { grid-area: m; }
+.footer { grid-area: f; }
+          </pre>
+
+          <h2>4. Flexbox vs. Grid</h2>
+          <p>Use Flexbox for small-scale layouts or components (like navbars) and Grid for large-scale page structures. They are best used together!</p>
+          
+          <a href="#webdev" class="btn">Back to Web Dev Index</a>
+       </div>
+    </section>
+
+
+
+  </main>
+
+  <footer style="text-align: center; padding: 2rem; color: #888; border-top: 1px solid #ddd; margin-top: 5rem; background: #fff;">
+    <p>&copy; 2026 CodeHive</p>
+  </footer>
+
+</body>
+</html>

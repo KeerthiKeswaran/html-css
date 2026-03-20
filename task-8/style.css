@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f9fafb;
+    color: #1f2937;
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+    min-height: 100vh;
+}
+
+.faq-container {
+    width: 100%;
+    max-width: 650px;
+    padding: 0 1.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #111827;
+}
+
+.faq-item {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.faq-toggle {
+    display: none;
+}
+
+.faq-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.faq-label:hover {
+    background: #f8fafc;
+    color: #2563eb;
+}
+
+.faq-icon {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #9ca3af;
+    border-bottom: 2px solid #9ca3af;
+    transform: translateY(-2px) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-toggle:checked + .faq-label {
+    color: #2563eb;
+}
+
+.faq-toggle:checked + .faq-label .faq-icon {
+    transform: translateY(2px) rotate(-135deg);
+    border-color: #2563eb;
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
+    padding: 0 1.5rem;
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.faq-toggle:checked ~ .faq-content {
+    max-height: 500px;
+    padding-bottom: 1.5rem;
+}

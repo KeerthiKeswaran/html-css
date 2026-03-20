@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNext</title>
+    <!-- Importing modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- FEATURE: Sticky Header with Flexbox -->
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="logo">ShopNext</div>
+            
+            <!-- FEATURE: Flexbox Alignment for Navigation -->
+            <nav class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#catalog">Catalog</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products...">
+                </div>
+                
+                <!-- FEATURE: Profile dropdown with categories using Flexbox -->
+                <div class="profile-dropdown">
+                    <div class="profile-trigger">Categories &#9662;</div>
+                    <div class="dropdown-content">
+                        <a href="#">Electronics</a>
+                        <a href="#">Fashion</a>
+                        <a href="#">Home & Garden</a>
+                        <a href="#">Sports</a>
+                        <a href="#">Books</a>
+                        <a href="#">Gift Cards</a>
+                        <a href="#">Outdoor</a>
+                        <a href="#">Beauty</a>
+                        <a href="#">Toys</a>
+                        <a href="#">Kitchen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FEATURE: Main Layout using CSS Grid -->
+    <main class="main-layout" id="hero">
+        <!-- FEATURE: Hero Section with Overlapping Elements (CSS Grid / Z-index) -->
+        <section class="hero-section">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>Elevate Your Style</h1>
+                <p>Discover our new collection of premium essentials tailored for your lifestyle.</p>
+                <button class="btn-primary">Shop Now</button>
+            </div>
+           
+        </section>
+
+        <!-- FEATURE: New Catalog Arrivals Section (Simple Flex Layout) -->
+        <section class="catalog-intro" id="catalog">
+            <h2 class="section-title">Spring Catalog 2026</h2>
+            <div class="catalog-banner">
+                <div class="banner-item">
+                    <h3>Explore Fresh Arrivals</h3>
+                    <p>Hand-picked essentials for the modern look.</p>
+                </div>
+                <div class="banner-item">
+                    <h3>Curated for You</h3>
+                    <p>Quality materials meets timeless design.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURE: Project Showcase Product Grid -->
+        <section class="product-showcase">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid">
+                <!-- 10 Product Samples -->
+                <div class="product-card">
+                    <img src="assets/leather-bag.jpg" alt="Bag" class="product-img">
+                    <div class="product-info">
+                        <h3>Premium Leather bag</h3>
+                        <p class="price">$120.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/earbuds.jpg" alt="Earbuds" class="product-img">
+                    <div class="product-info">
+                        <h3>Wireless Earbuds</h3>
+                        <p class="price">$89.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/smart-watch.jpg" alt="Smart Watch" class="product-img">
+                    <div class="product-info">
+                        <h3>Smart Watch Series 5</h3>
+                        <p class="price">$299.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/lamp.jpg" alt="Lamp" class="product-img">
+                    <div class="product-info">
+                        <h3>Minimalist Desk Lamp</h3>
+                        <p class="price">$45.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/speaker.jpg" alt="Speaker" class="product-img">
+                    <div class="product-info">
+                        <h3>Bluetooth Speaker</h3>
+                        <p class="price">$55.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/keyboard.jpg" alt="Keyboard" class="product-img">
+                    <div class="product-info">
+                        <h3>Mechanical Keyboard</h3>
+                        <p class="price">$150.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/headphones.jpg" alt="Headphones" class="product-img">
+                    <div class="product-info">
+                        <h3>Noise Cancelling Headphones</h3>
+                        <p class="price">$210.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/power-bank.jpg" alt="Power Bank" class="product-img">
+                    <div class="product-info">
+                        <h3>Portable Power Bank</h3>
+                        <p class="price">$35.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/coffee-french-press.jpg" alt="French Press" class="product-img">
+                    <div class="product-info">
+                        <h3>Coffee French Press</h3>
+                        <p class="price">$28.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/cotton-tshirt.png" alt="T-Shirt" class="product-img">
+                    <div class="product-info">
+                        <h3>Organic Cotton T-Shirt</h3>
+                        <p class="price">$25.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- 11th Product Item -->
+                <div class="product-card">
+                    <img src="assets/office-chair.jpg" alt="Office Chair" class="product-img">
+                    <div class="product-info">
+                        <h3>Ergonomic Office Chair</h3>
+                        <p class="price">$199.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FEATURE: Sticky Sidebar with CSS Grid Area -->
+        <aside class="sidebar-filters">
+            <h3>Filters</h3>
+            <ul class="filter-list">
+                <li><label><input type="checkbox"> New Arrivals</label></li>
+                <li><label><input type="checkbox"> Best Selling</label></li>
+                <li><label><input type="checkbox"> Price: Low to High</label></li>
+                <li><label><input type="checkbox"> Price: High to Low</label></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- FEATURE: Contact Section (Flexbox & Block Layout) -->
+    <section class="contact-section container" id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Email: support@shopnext.com</p>
+                <p>Phone: 123-4567</p>
+                <p>Address: Chennai,India</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 ShopNext. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,409 @@
+:root {
+  --primary-color: #333c41;
+  --primary-hover: #44435a;
+  --bg-color: #f8f9fa;
+  --text-color: #333;
+  --white: #ffffff;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --border-radius: 8px;
+  --nav-height: 70px;
+  --transition-speed: 0.4s;
+  --modal-overlay: rgba(0, 0, 0, 0.82);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+header {
+  height: var(--nav-height);
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+  position: relative;
+}
+
+nav a:hover, nav a:active {
+  color: var(--primary-color);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Page Management Logic using :target */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 20px;
+  position: relative;
+  min-height: calc(100vh - var(--nav-height) - 4rem);
+}
+
+.page {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: pageIn var(--transition-speed) forwards;
+}
+
+/* Show targeted section or a page containing a targeted element */
+.page:target {
+  display: block;
+}
+
+/* Show #home by default if no target is active anywhere or if #home itself is targeted */
+#home:not(:has(~ .page:target)) {
+  display: block;
+}
+
+/* Logic to hide #home when another page is targeted */
+/* We use a sibling selector or a more general approach */
+main:has(#dsa:target, #algo:target, #webdev:target, #about:target, #bst:target, #dijkstra:target, #flexbox:target, #arrays:target, #linkedlist:target, #bubble-sort:target, #css-grid:target) #home {
+  display: none !important;
+}
+
+@keyframes pageIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Content Styles */
+.section-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+  cursor: pointer;
+  border-top: 4px solid var(--primary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.25rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+
+.blog-post {
+  background: var(--white);
+  padding: 4rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.blog-post h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.blog-post h2 {
+  font-size: 2rem;
+  margin: 2.5rem 0 1.2rem;
+  color: #111;
+  font-weight: 700;
+}
+
+.blog-post p {
+  font-size: 1.15rem;
+  margin-bottom: 1.8rem;
+  color: #444;
+}
+
+.blog-post ul, .blog-post ol {
+  margin: 1.5rem 0 2.5rem 2rem;
+}
+
+.blog-post li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.blog-post code {
+  background: #f8f9fa;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  color: #e83e8c;
+  font-size: 0.95em;
+  border: 1px solid #eee;
+}
+
+.blog-post pre {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 2rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin: 2rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.blog-post-header {
+  margin-bottom: 4rem;
+}
+
+/* Carousel Styles (CSS Only) */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  margin-bottom: 3rem;
+  box-shadow: var(--card-shadow);
+}
+
+.carousel-slides {
+  display: flex;
+  width: 500%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1);
+  animation: autoScroll 25s infinite ease-in-out;
+}
+
+/* Pause scroll on hover */
+.carousel-container:hover .carousel-slides {
+  animation-play-state: paused;
+}
+
+/* Stop animation and override transform if any radio button is manually checked */
+.carousel-container:has(input:checked) .carousel-slides {
+  animation: none;
+}
+
+@keyframes autoScroll {
+  0%, 15% { transform: translateX(0); }
+  20%, 35% { transform: translateX(-20%); }
+  40%, 55% { transform: translateX(-40%); }
+  60%, 75% { transform: translateX(-60%); }
+  80%, 95% { transform: translateX(-80%); }
+  100%    { transform: translateX(0); }
+}
+
+.slide {
+  width: 20%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide:nth-child(1) { background: linear-gradient(135deg, #2f8d46 0%, #1c542a 100%); }
+.slide:nth-child(2) { background: linear-gradient(135deg, #4f94cd 0%, #2b5d84 100%); }
+.slide:nth-child(3) { background: linear-gradient(135deg, #e67e22 0%, #a85d1a 100%); }
+.slide:nth-child(4) { background: linear-gradient(135deg, #9b59b6 0%, #6e3f81 100%); }
+.slide:nth-child(5) { background: linear-gradient(135deg, #34495e 0%, #1a252f 100%); }
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 3.5rem;
+  color: white;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+}
+
+.slide-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 800;
+}
+
+.slide-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+/* Radio Button Controls for Carousel */
+input[name="carousel"] {
+  display: none;
+}
+
+.carousel-nav {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.carousel-nav label {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.carousel-nav label:hover {
+  background: rgba(255,255,255,0.7);
+}
+
+#slideControls1:checked ~ .carousel-slides { transform: translateX(0); }
+#slideControls2:checked ~ .carousel-slides { transform: translateX(-20%); }
+#slideControls3:checked ~ .carousel-slides { transform: translateX(-40%); }
+#slideControls4:checked ~ .carousel-slides { transform: translateX(-60%); }
+#slideControls5:checked ~ .carousel-slides { transform: translateX(-80%); }
+
+#slideControls1:checked ~ .carousel-nav label[for="slideControls1"],
+#slideControls2:checked ~ .carousel-nav label[for="slideControls2"],
+#slideControls3:checked ~ .carousel-nav label[for="slideControls3"],
+#slideControls4:checked ~ .carousel-nav label[for="slideControls4"],
+#slideControls5:checked ~ .carousel-nav label[for="slideControls5"] {
+  background: var(--primary-color);
+  width: 35px;
+  border-radius: 8px;
+  border-color: rgba(255,255,255,0.5);
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 1.5rem;
+  }
+  
+  .logo {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  nav {
+    width: 100%;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+  
+  .carousel-container {
+    height: 350px;
+  }
+  
+  .slide-content {
+    padding: 2rem;
+  }
+  
+  .slide-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .slide-content p {
+    font-size: 1rem;
+  }
+
+  .blog-post {
+    padding: 1.5rem;
+  }
+
+  .blog-post h1 {
+    font-size: 2rem;
+  }
+}
+

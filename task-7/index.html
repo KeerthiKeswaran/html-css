@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Character Deck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Layer for Blur Effect -->
+    <div class="bg-wrapper">
+        <div class="bg-slides">
+            <div class="bg-slide" style="background-image: url('assets/iron-man.jpg');"></div>
+            <div class="bg-slide" style="background-image: url('assets/captain-america.jpg');"></div>
+            <div class="bg-slide" style="background-image: url('assets/thor.jpg');"></div>
+            <div class="bg-slide" style="background-image: url('assets/hulk.jpg');"></div>
+            <div class="bg-slide" style="background-image: url('assets/natasha.jpg');"></div>
+            <div class="bg-slide" style="background-image: url('assets/clint.jpg');"></div>
+            <div class="bg-slide" style="background-image: url('assets/captrain-marvel.jpg');"></div>
+            <div class="bg-slide" style="background-image: url('assets/nebula.jpg');"></div>
+            <div class="bg-slide" style="background-image: url('assets/thanos.jpg');"></div>
+        </div>
+    </div>
+
+    <header class="marvel-header">
+        <h1>MARVEL <span>CHARACTERS</span></h1>
+    </header>
+
+    <div class="carousel-wrapper">
+        <!-- Radio Buttons (9 Slides) -->
+        <input type="radio" name="slider" id="auto-start" checked>
+        <input type="radio" name="slider" id="slide1">
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <input type="radio" name="slider" id="slide5">
+        <input type="radio" name="slider" id="slide6">
+        <input type="radio" name="slider" id="slide7">
+        <input type="radio" name="slider" id="slide8">
+        <input type="radio" name="slider" id="slide9">
+
+        <!-- Main Card Container -->
+        <main class="carousel-container">
+            <section class="slides">
+                <figure class="slide">
+                    <img src="assets/iron-man.jpg" alt="Iron Man">
+                    <figcaption class="info"><h2>Iron Man</h2></figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="assets/captain-america.jpg" alt="Captain America">
+                    <figcaption class="info"><h2>Captain America</h2></figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="assets/thor.jpg" alt="Thor">
+                    <figcaption class="info"><h2>Thor</h2></figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="assets/hulk.jpg" alt="Hulk">
+                    <figcaption class="info"><h2>Hulk</h2></figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="assets/natasha.jpg" alt="Black Widow">
+                    <figcaption class="info"><h2>Black Widow</h2></figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="assets/clint.jpg" alt="Hawkeye">
+                    <figcaption class="info"><h2>Hawkeye</h2></figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="assets/captrain-marvel.jpg" alt="Captain Marvel">
+                    <figcaption class="info"><h2>Captain Marvel</h2></figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="assets/nebula.jpg" alt="Nebula">
+                    <figcaption class="info"><h2>Nebula</h2></figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="assets/thanos.jpg" alt="Thanos">
+                    <figcaption class="info"><h2>Thanos</h2></figcaption>
+                </figure>
+            </section>
+
+            <!-- Navigation Dots (Inside for focus) -->
+            <nav class="navigation">
+                <label for="slide1" class="nav-dot"></label>
+                <label for="slide2" class="nav-dot"></label>
+                <label for="slide3" class="nav-dot"></label>
+                <label for="slide4" class="nav-dot"></label>
+                <label for="slide5" class="nav-dot"></label>
+                <label for="slide6" class="nav-dot"></label>
+                <label for="slide7" class="nav-dot"></label>
+                <label for="slide8" class="nav-dot"></label>
+                <label for="slide9" class="nav-dot"></label>
+            </nav>
+        </main>
+
+        <!-- Arrows (Outside the overflow-hidden container) -->
+        <div class="arrow-wrapper arrow-1">
+            <label for="slide9" class="prev">&#10094;</label>
+            <label for="slide2" class="next">&#10095;</label>
+        </div>
+        <div class="arrow-wrapper arrow-2">
+            <label for="slide1" class="prev">&#10094;</label>
+            <label for="slide3" class="next">&#10095;</label>
+        </div>
+        <div class="arrow-wrapper arrow-3">
+            <label for="slide2" class="prev">&#10094;</label>
+            <label for="slide4" class="next">&#10095;</label>
+        </div>
+        <div class="arrow-wrapper arrow-4">
+            <label for="slide3" class="prev">&#10094;</label>
+            <label for="slide5" class="next">&#10095;</label>
+        </div>
+        <div class="arrow-wrapper arrow-5">
+            <label for="slide4" class="prev">&#10094;</label>
+            <label for="slide6" class="next">&#10095;</label>
+        </div>
+        <div class="arrow-wrapper arrow-6">
+            <label for="slide5" class="prev">&#10094;</label>
+            <label for="slide7" class="next">&#10095;</label>
+        </div>
+        <div class="arrow-wrapper arrow-7">
+            <label for="slide6" class="prev">&#10094;</label>
+            <label for="slide8" class="next">&#10095;</label>
+        </div>
+        <div class="arrow-wrapper arrow-8">
+            <label for="slide7" class="prev">&#10094;</label>
+            <label for="slide9" class="next">&#10095;</label>
+        </div>
+        <div class="arrow-wrapper arrow-9">
+            <label for="slide8" class="prev">&#10094;</label>
+            <label for="slide1" class="next">&#10095;</label>
+        </div>
+    </div>
+
+</body>
+</html>
